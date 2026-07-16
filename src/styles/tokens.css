@@ -1,0 +1,25 @@
+:root {
+  --color-bg: #0a0e1a;
+  --color-surface: #141929;
+  --color-surface-raised: #1b2236;
+  --color-border: #232b42;
+  --color-accent: #4f8ef7;
+  --color-text: #e6e9f2;
+  --color-text-muted: #8b93a7;
+
+  --color-live: #f59e0b;
+  --color-final: #6b7280;
+  --color-upcoming: #4f8ef7;
+
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-card: 12px;
+  --radius-badge: 999px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
