@@ -1,4 +1,5 @@
 import ScoreboardHeader from './components/ScoreboardHeader.jsx'
+import SearchBar from './components/SearchBar.jsx'
 import GameGrid from './components/GameGrid.jsx'
 import StateWrapper from './components/StateWrapper.jsx' 
 import useScoreboard from './hooks/useScoreboard.js';
@@ -51,6 +52,10 @@ export default function App() {
   return (
     <div className="app">
       <ScoreboardHeader title="War Room: WNBA Live" todayDate={todayDate} />
+      <SearchBar
+        value={} // TODO(krystal): pass query here
+        onChange={} // TODO(krystal): pass setQuery handler here
+      />
       <GameGrid games={mappedGames} />
     </div>
   )
