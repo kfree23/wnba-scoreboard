@@ -1,7 +1,6 @@
 import '../styles/state-wrapper.css'
 
-// `variant`: 'loading' | 'error' | 'empty'
-// Caller decides which variant to render and when — no logic in here.
+
 export default function StateWrapper({ variant, title, message }) {
   return (
     <div className={`state-wrapper state-wrapper--${variant}`}>

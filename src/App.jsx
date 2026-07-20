@@ -1,15 +1,10 @@
 import ScoreboardHeader from './components/ScoreboardHeader.jsx'
 import GameGrid from './components/GameGrid.jsx'
-// import StateWrapper from './components/StateWrapper.jsx' // for loading / error / empty
+import StateWrapper from './components/StateWrapper.jsx' 
 import useScoreboard from './hooks/useScoreboard.js';
-import { scoreboardFixture } from './fixtures/games.js';
 import './styles/app.css'
 
 export default function App() {
-  // TODO(krystal): you write this — call useScoreboard() here, get back
-  // whatever shape you decide (games, status, etc.), and pass real values
-  // down to ScoreboardHeader / GameGrid. Use StateWrapper in place of
-  // GameGrid for the loading / error / empty states.
   const todayDate = new Date().toLocaleDateString('en-US', { 
   weekday: 'long', 
   month: 'long', 

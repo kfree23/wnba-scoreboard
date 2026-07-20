@@ -1,9 +1,6 @@
 import StatusBadge from './StatusBadge.jsx'
 import '../styles/game-card.css'
 
-// Expected shape for `awayTeam` / `homeTeam`: { name, abbreviation, logo, score }
-// `status`: 'live' | 'final' | 'upcoming'
-// `clock`: string, only meaningful when status === 'live' (e.g. "Q3 04:52")
 export default function GameCard({ awayTeam, homeTeam, status, clock }) {
   return (
     <article className="game-card">
