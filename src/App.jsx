@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ScoreboardHeader from './components/ScoreboardHeader.jsx'
 import SearchBar from './components/SearchBar.jsx'
 import GameGrid from './components/GameGrid.jsx'
@@ -12,6 +13,7 @@ export default function App() {
   day: 'numeric' 
 })
   const { games, loading, error } = useScoreboard();
+  const [ query, setQuery ] = useState("");
 
   if(loading) {
     return <StateWrapper type="loading" />
@@ -49,14 +51,18 @@ export default function App() {
     }
   })
 
+  const filterGames = mappedGames.filter((game) => {
+    return game.awayTeam.name.toLowerCase().includes(query.toLowerCase()) || game.homeTeam.name.toLowerCase().includes(query.toLowerCase())
+  });
+
   return (
     <div className="app">
       <ScoreboardHeader title="War Room: WNBA Live" todayDate={todayDate} />
       <SearchBar
-        value={} // TODO(krystal): pass query here
-        onChange={} // TODO(krystal): pass setQuery handler here
+        value={query} 
+        onChange={(e) => setQuery(e.target.value)} 
       />
-      <GameGrid games={mappedGames} />
+      <GameGrid games={filterGames} />
     </div>
   )
 }
