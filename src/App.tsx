@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ScoreboardHeader from './components/ScoreboardHeader.jsx'
-import SearchBar from './components/SearchBar.jsx'
-import GameGrid from './components/GameGrid.jsx'
-import StateWrapper from './components/StateWrapper.jsx' 
+import ScoreboardHeader from './components/ScoreboardHeader.js'
+import SearchBar from './components/SearchBar.js'
+import GameGrid from './components/GameGrid.js'
+import StateWrapper from './components/StateWrapper.js' 
 import useScoreboard from './hooks/useScoreboard.js';
 import './styles/app.css'
 

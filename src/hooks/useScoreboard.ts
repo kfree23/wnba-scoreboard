@@ -5,7 +5,7 @@ function useScoreboard() {
 
     const [games, setGames] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<null | string>(null);
 
     useEffect(() => {
         async function loadGames() {
