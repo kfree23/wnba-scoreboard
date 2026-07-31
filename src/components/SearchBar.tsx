@@ -1,6 +1,11 @@
 import '../styles/search-bar.css'
 
-export default function SearchBar({ value, onChange }) {
+interface SearchBarProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export default function SearchBar({ value, onChange }: SearchBarProps) {
   return (
     <div className="search-bar">
       <input

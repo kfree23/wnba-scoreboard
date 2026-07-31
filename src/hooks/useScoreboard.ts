@@ -3,7 +3,7 @@ import { fetchScoreboard } from '../services/api';
 
 function useScoreboard() {
 
-    const [games, setGames] = useState([]);
+    const [games, setGames] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<null | string>(null);
 

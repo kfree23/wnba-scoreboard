@@ -14,23 +14,24 @@ export default function App() {
 })
   const { games, loading, error } = useScoreboard();
   const [ query, setQuery ] = useState("");
+  
 
   if(loading) {
-    return <StateWrapper type="loading" />
+    return <StateWrapper variant="loading" />
   }
 
   if(error) {
-    return <StateWrapper type="error" message={error} />
+    return <StateWrapper variant="error" message={error} />
   }
 
   if(!games.length) {
-    return <StateWrapper type="empty" />
+    return <StateWrapper variant="empty" />
   }
 
   const mappedGames = games.map((event) => {
     const competition = event.competitions[0];
-    const away = competition.competitors.find(c => c.homeAway === 'away');
-    const home = competition.competitors.find(c => c.homeAway === 'home');
+    const away = competition.competitors.find((c: any)=> c.homeAway === 'away');
+    const home = competition.competitors.find((c: any)=> c.homeAway === 'home');
 
     return {
       id: competition.id,
@@ -60,7 +61,7 @@ export default function App() {
       <ScoreboardHeader title="War Room: WNBA Live" todayDate={todayDate} />
       <SearchBar
         value={query} 
-        onChange={(e) => setQuery(e.target.value)} 
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)} 
       />
       <GameGrid games={filterGames} />
     </div>
